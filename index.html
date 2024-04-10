@@ -10,49 +10,61 @@
 
 <body>
     <form id="form-div">
+        <!-- heading -->
         <div class="heading">
             Tax-Calculator
         </div>
+<!-- Annual Income -->
         <label for="income">Enter gross annual income
             <span>
                 <img class="question-logo" src="./question.png" />
             </span>
         </label>
-<div id="income-error" class="error"></div>
 <div class="input-div">
     <input type="text" placeholder="Enter gross annual income" id="income" class="validate">
-    <span>
-        <img class="error-logo" src="./question.png" />
+    <span class="error-span" id="income-error">
+        <img class="error-logo" src="./error.png" />
     </span>
 </div>
 <br><br>
 
-<label for="extraIncome">Extra extra income
+<label for="extraIncome">Enter extra income
     <span>
         <img class="question-logo" src="./question.png" />
     </span>
 </label>
-<div id="extraIncome-error" class="error"></div>
-<input type="text" placeholder="Enter extra income from other sources" id="extraIncome" class="validate"><br><br>
+<div class="input-div">
+    <input type="text" placeholder="Enter extra income from other sources" id="extraIncome" class="validate">
+    <span class="error-span" id="extraIncome-error">
+        <img class="error-logo" src="./error.png" />
+    </span>
+</div><br><br>
 
 <label for="age">Enter age group
     <span>
         <img class="question-logo" src="./question.png" />
     </span>
 </label>
+<div class="input-div">
 <select id="age">
     <option value="<40">&lt;40</option>
     <option value=">=40&<60">&ge;40 &lt;60</option>
     <option value=">=60">&ge;60</option>
-</select><br><br>
+</select>
+</div>
+<br><br>
 
 <label for="deductions">Enter total applicable deductions
     <span>
         <img class="question-logo" src="./question.png" />
     </span>
 </label>
-<div id="deductions-error" class="error"></div>
-<input type="text" placeholder="Add total applicable deductions" id="deductions" class="validate"><br><br>
+<div class="input-div">
+    <input type="text" placeholder="Add total applicable deductions" id="deductions" class="validate">
+    <span class="error-span" id="deductions-error">
+        <img class="error-logo" src="./error.png" />
+    </span>
+</div><br><br>
 
 <button type="button" onclick="calculateTax()">Submit</button>
 </form>
