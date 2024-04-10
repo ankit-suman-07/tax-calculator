@@ -20,7 +20,8 @@ body {
 }
 
 #form-div {
-    border: 2px solid black;
+    border: 2px solid #9DACBA;
+        border-radius: 4px;
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -37,6 +38,8 @@ input,
 select {
     height: 30px;
     width: 100%;
+    border: 2px solid #9DACBA;
+        border-radius: 4px;
 }
 
 .input-div {
@@ -65,7 +68,8 @@ select {
 .error-span:hover::after {
     width: 80px;
     border: 2px solid black;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #4C5D6B;
+        /* background-color: rgba(0, 0, 0, 0.9); */
     font-size: 12px;
     color: white;
     border-radius: 2px;
@@ -77,8 +81,23 @@ select {
 }
 
 button {
+    background-color: #6559F5;
+        border: none;
+        border-radius: 4px;
     margin: 0 30px 30px 30px;
-    height: 30px;
+    height: 40px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fefefe;
+        letter-spacing: 0.5px;
+    }
+    
+    button:hover {
+        background-color: #fefefe;
+        border: 2px solid #6559F5;
+        color: #6559F5;
+        cursor: pointer;
 }
 #income-error:hover::after {
     content: "Please enter a number for income";
@@ -92,7 +111,15 @@ button {
     content: "Please enter a number for deductions";
 }
 
-.modal {
+#age-error:hover::after,
+#income-mandatory:hover::after,
+#extraIncome-mandatory:hover::after,
+#deductions-mandatory:hover::after {
+    content: "This field is mandatory";
+    top: -50px;
+}
+
+/* .modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -105,24 +132,47 @@ button {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+*/ .modal {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+}
 .modal-content {
+    border: 2px solid #9DACBA;
     background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    width: 420px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .result-head {
+        color: #333333;
+        font-size: 25px;
+        font-weight: 600;
+        margin: 10px;
+    }
+    
+    #result {
+        font-size: 30px;
+        font-weight: 600;
+}
+
+.result-text {
+    color: #333333;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px;
 }
 
 .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+    margin-top: 50px;
 }

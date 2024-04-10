@@ -25,8 +25,11 @@
     <span class="error-span" id="income-error">
         <img class="error-logo" src="./error.png" />
     </span>
+    <span class="error-span" id="income-mandatory">
+        <img class="error-logo" src="./error.png" />
+    </span>
 </div>
-<br><br>
+<br>
 
 <label for="extraIncome">Enter extra income
     <span>
@@ -38,7 +41,11 @@
     <span class="error-span" id="extraIncome-error">
         <img class="error-logo" src="./error.png" />
     </span>
-</div><br><br>
+    <span class="error-span" id="extraIncome-mandatory">
+        <img class="error-logo" src="./error.png" />
+    </span>
+    </div>
+    <br>
 
 <label for="age">Enter age group
     <span>
@@ -47,12 +54,16 @@
 </label>
 <div class="input-div">
 <select id="age">
-    <option value="<40">&lt;40</option>
-    <option value=">=40&<60">&ge;40 &lt;60</option>
-    <option value=">=60">&ge;60</option>
+    <option value="empty" default>Enter age group</option>
+    <option value="Less than 40">Less than 40</option>
+    <option value="40 to less than 60">40 to less than 60</option>
+    <option value="Greater than 60">Greater than 60</option>
 </select>
+<span class="error-span" id="age-error">
+    <img class="error-logo" src="./error.png" />
+</span>
 </div>
-<br><br>
+<br>
 
 <label for="deductions">Enter total applicable deductions
     <span>
@@ -64,15 +75,24 @@
     <span class="error-span" id="deductions-error">
         <img class="error-logo" src="./error.png" />
     </span>
-</div><br><br>
+    <span class="error-span" id="deductions-mandatory">
+        <img class="error-logo" src="./error.png" />
+    </span>
+    </div>
+    <br>
 
 <button type="button" onclick="calculateTax()">Submit</button>
 </form>
 
+<!-- Result Modal -->
 <div id="modal" class="modal">
     <div class="modal-content">
-        <span class="close">&times;</span>
-        <p id="result"></p>
+        <div class="result-head">Your overall income will be</div>
+        <div id="result"></div>
+        <div id="result-error"></div>
+        <div class="result-text">after tax deductions</div>
+        <button class="close">Close</button>
+        </div>
         </div>
     </div>
 <script src="script.js"></script>
