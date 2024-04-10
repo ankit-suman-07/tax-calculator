@@ -51,7 +51,7 @@ function calculateTax() {
         modal.style.display = "flex";
 
         // Close the modal when clicking on the close button
-        var closeBtn = document.getElementsByClassName("close")[0];
+        var closeBtn = document.getElementsByClassName("close-error")[0];
         closeBtn.onclick = function () {
             modal.style.display = "none";
         }

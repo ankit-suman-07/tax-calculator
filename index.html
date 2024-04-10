@@ -9,6 +9,20 @@
 </head>
 
 <body>
+    <div class="top-bar">
+        <div class="logo">
+            <img class="logo-img" src="./logo.png" />
+        </div>
+        <div class="links">
+            <a href="https://github.com/ankit-suman-07/tax-calculator">Code</a>
+            <a href="https://www.linkedin.com/in/ankit--suman/">
+                <img class="link-social" src="./social.png" />
+            </a>
+            <a href="https://github.com/ankit-suman-07">
+                <img class="link-social" src="./github.png" />
+            </a>
+        </div>
+    </div>
     <form id="form-div">
         <!-- heading -->
         <div class="heading">
@@ -89,12 +103,18 @@
     <div class="modal-content">
         <div class="result-head">Your overall income will be</div>
         <div id="result"></div>
-        <div id="result-error"></div>
         <div class="result-text">after tax deductions</div>
         <button class="close">Close</button>
         </div>
         </div>
     </div>
+<div id="modal-error" class="modal">
+    <div class="modal-content">
+        <div id="result-error">Deductions cannot be more than income</div>
+        <button class="close close-error">Close</button>
+    </div>
+</div>
+</div>
 <script src="script.js"></script>
 </body>
 
