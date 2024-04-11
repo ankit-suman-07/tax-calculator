@@ -4,7 +4,9 @@ function calculateTax() {
     var extraIncome = parseFloat(document.getElementById("extraIncome").value);
     var deductions = parseFloat(document.getElementById("deductions").value);
     var ageError = document.getElementById("age-error");
+
     // Validation
+    // If any field is left empty, then show error icon
     if (age === "empty" || !income || !extraIncome || !deductions) {
         if (age === "empty") {
             ageError.style.display = "block";
@@ -20,13 +22,9 @@ function calculateTax() {
         }
         return
     }
-    // var errorSpans = document.getElementsByClassName("error-span");
-    // for (var i = 0; i < errorSpans.length; i++) {
-    //     errorSpans[i].style.display = "none";
-    // }
 
 
-    // Calculate taxable income
+    // Calculate taxable income based on the formula given
     var taxableIncome = income + extraIncome - deductions;
     var tax = 0;
     if (taxableIncome > 800000) {
@@ -43,14 +41,17 @@ function calculateTax() {
         }
     }
 
+    // If entered deduction is more than that the total income then the entry is invalid
     if (deductions > (income + extraIncome)) {
         document.getElementById("result").innerHTML = "Deductions cannot be more than Income";
 
-        // Display modal
+        // Display modal to show error
         var modal = document.getElementById("modal-error");
         modal.style.display = "flex";
 
         // Close the modal when clicking on the close button
+        // Do not reset the input values
+        // Allow user to change the values
         var closeBtn = document.getElementsByClassName("close-error")[0];
         closeBtn.onclick = function () {
             modal.style.display = "none";
@@ -63,6 +64,7 @@ function calculateTax() {
             }
         }
     } else {
+        // Format the output value in INR format
         document.getElementById("result").innerHTML = new Intl.NumberFormat('en-IN').format((taxableIncome - tax).toFixed(2));
         document.getElementById("result-error").innerHTML = "";
 
@@ -74,6 +76,7 @@ function calculateTax() {
         var closeBtn = document.getElementsByClassName("close")[0];
         closeBtn.onclick = function () {
             modal.style.display = "none";
+            // Reset the input field values
             document.getElementById("income").value = "";
             document.getElementById("extraIncome").value = "";
             document.getElementById("deductions").value = "";
@@ -83,6 +86,7 @@ function calculateTax() {
         window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
+                // Reset the input field values
                 document.getElementById("income").value = "";
                 document.getElementById("extraIncome").value = "";
                 document.getElementById("deductions").value = "";
