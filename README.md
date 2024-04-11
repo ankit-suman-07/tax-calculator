@@ -12,6 +12,7 @@
 
 ## Features
 - Calculates tax based on the input for gross income, extra income and deductions.
+- Income after deducting this tax from the total income is displayed.
 - Invalid inputs can be entered, but an error is presented to inform regarding invalid inputs.
 - Amount is entered in INR and not in Lakhs (800000 is entered instead of 8 Lakhs)
 - Result cannot be displayed if there is any input left empty.
