@@ -234,4 +234,12 @@ button {
         height: 300px;
 
     }
+label {
+    margin: 4px 20px;
+
+}
+
+button {
+    margin: 0 20px 30px 20px;
+}
 }
