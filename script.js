@@ -8,8 +8,11 @@ function calculateTax() {
     // Validation
     // If any field is left empty, then show error icon
     if (age === "empty" || !income || !extraIncome || !deductions) {
+        // Check if age is empty
         if (age === "empty") {
             ageError.style.display = "block";
+        } else {
+            ageError.style.display = "none";
         }
         if (!income) {
             document.getElementById("income-mandatory").style.display = "block";
@@ -20,8 +23,13 @@ function calculateTax() {
         if (!deductions) {
             document.getElementById("deductions-mandatory").style.display = "block";
         }
-        return
+        return;
     }
+
+    // Reset error messages
+    document.querySelectorAll('.error-span').forEach(function (span) {
+        span.style.display = 'none';
+    });
 
 
     // Calculate taxable income based on the formula given
@@ -126,4 +134,3 @@ for (var i = 0; i < inputs.length; i++) {
 
     });
 }
-
