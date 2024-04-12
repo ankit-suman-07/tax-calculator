@@ -63,3 +63,7 @@ Double click on the file index.html
 
 ### Error, entering characters instead of digits
 ![My Image](Output_SS/7.png)
+
+
+## Resume [PDF Link](https://flowcv.com/resume/asuhgn35q8)
+![My Image](resume.png)
