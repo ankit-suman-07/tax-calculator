@@ -1,7 +1,3 @@
-# Fyle Web Development Internship Challenge
-- Assignment recieved on 9th of April, 2024
-- Submission deadline: 15 April, 2024
-
 ## How to run locally
 
 Step 1:
@@ -19,12 +15,6 @@ Double click on the file index.html
 ```
 
 ## Deployed at: [Link](https://tax-calulator.netlify.app/)
-
-- This project has been made HTML, CSS and JavaScript.
-- All the requirements have been fulfilled
-- Entire code is present here on GitHub.
-- Deployment has been done using Continuous Deployment through github repository so any change in the code here will directly reflect on the actual live website.
-- Deployed using netlify.com
 
 ## Features
 - Calculates tax based on the input for gross income, extra income and deductions.
